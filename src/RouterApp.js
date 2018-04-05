@@ -14,7 +14,13 @@ class App extends Component {
           <header>
             <Link to="/">Home</Link><br/>
             <Link to="/posts">Posts</Link><br/>
-            <Link to="/profile">Profile</Link><br/>
+            <Link to={{
+              pathname: '/profile',
+              hash: '#francis',
+              search: '?profile=true'}}
+              >Profile</Link>
+              <br/>
+            <hr/>
           </header>
           <Route path="/" exact component={Home} />
           <Route path="/posts" component={Posts} />
