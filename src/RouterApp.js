@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './RouterApp.css';
 
 import Home from './components/Home/Home';
@@ -9,11 +9,13 @@ import Profile from './components/Profile/Profile';
 class App extends Component {
   render() {
     return (
-      <div className="RouterApp">
-        <Home />
-        <Posts />
-        <Profile />
-      </div>
+      <BrowserRouter>
+        <div>
+          <Route path="/posts" component={Posts} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/" component={Home} />
+        </div>
+      </BrowserRouter>
     );
   }
 }
