@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Posts from './components/Posts/Posts';
 import Profile from './components/Profile/Profile';
 import PostItem from './components/PostItem/PostItem';
+import NotFound from './components/NotFound/NotFound';
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
               <Route path="/posts" exact component={Posts} />
               <Route path="/profile" component={Profile} />
               <Route path="/" exact component={Home} />
+              <Route component={NotFound} />
             </Switch>
         </div>
       </BrowserRouter>
