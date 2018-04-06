@@ -25,10 +25,10 @@ class App extends Component {
             <hr/>
           </header>
             <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/posts" exact component={Posts} />
-          <Route path="/posts/:id/:username" component={PostItem} /> 
-          <Route path="/profile" component={Profile} />
+              <Route path="/posts/:id/:username" component={PostItem} /> 
+              <Route path="/posts" exact component={Posts} />
+              <Route path="/profile" component={Profile} />
+              <Route path="/" exact component={Home} />
             </Switch>
         </div>
       </BrowserRouter>
