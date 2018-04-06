@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, NavLink, Switch } from 'react-router-dom';
 import './RouterApp.css';
 
 import Home from './components/Home/Home';
@@ -24,10 +24,12 @@ class App extends Component {
                      activeStyle={{color:'red'}}>Profile</NavLink><br/>
             <hr/>
           </header>
+            <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/posts" exact component={Posts} />
           <Route path="/posts/:id/:username" component={PostItem} /> 
           <Route path="/profile" component={Profile} />
+            </Switch>
         </div>
       </BrowserRouter>
     );
