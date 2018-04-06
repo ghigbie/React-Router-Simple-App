@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <div>
+        <div className="container">
           <header>
             <NavLink to="/"
                      activeStyle={{color:'red'}}>Home</NavLink><br/>
