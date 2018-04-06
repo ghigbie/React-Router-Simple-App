@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, NavLink } from 'react-router-dom';
 import './RouterApp.css';
 
 import Home from './components/Home/Home';
@@ -13,19 +13,20 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <header>
-            <Link to="/">Home</Link><br/>
-            <Link to="/posts">Posts</Link><br/>
-            <Link to={{
-              pathname: '/profile',
-              hash: '#francis',
-              search: '?profile=true'}}
-              >Profile</Link>
-              <br/>
+            <NavLink to="/"
+                     activeStyle={{color:'red'}}>Home</NavLink><br/>
+            <NavLink to="/posts"
+                     activeStyle={{color:'red'}}>Posts</NavLink><br/>
+            <NavLink to={{
+                        pathname: '/profile',
+                        hash: '#francis',
+                        search: '?profile=true'}}
+                     activeStyle={{color:'red'}}>Profile</NavLink><br/>
             <hr/>
           </header>
           <Route path="/" exact component={Home} />
           <Route path="/posts" exact component={Posts} />
-          <Route path="/posts/:id" component={PostItem} />
+          <Route path="/posts/:id/:username" component={PostItem} /> 
           <Route path="/profile" component={Profile} />
         </div>
       </BrowserRouter>
