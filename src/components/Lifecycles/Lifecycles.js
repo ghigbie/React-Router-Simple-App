@@ -18,7 +18,7 @@ class Lifecycle extends Component{
     render(){
         return(
             <div>
-                <h3></h3>
+                <h3>{this.state.title}</h3>
             </div>
         );
     }
