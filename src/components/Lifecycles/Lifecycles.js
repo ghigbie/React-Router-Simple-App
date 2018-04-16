@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 
 class Lifecycle extends Component{
+    
+    constructor(props){
+        super(props);
+        this.state = {
+            title: 'Lifecycle Component'
+        };
+    }
     //this component convers the lifecycle of a component
+    
     
     componentWillMount(){
         console.log('before render');
