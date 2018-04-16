@@ -14,15 +14,20 @@ class App extends Component {
       <BrowserRouter>
         <div className="container">
           <header>
-            <NavLink to="/"
+          <nav className="navbar navbar-dark bg-dark">
+            <NavLink className="nav-item nav-link"
+                     to="/"
                      activeStyle={{color:'red'}}>Home</NavLink><br/>
-            <NavLink to="/posts"
+            <NavLink className="nav-item nav-link"
+                     to="/posts"
                      activeStyle={{color:'red'}}>Posts</NavLink><br/>
-            <NavLink to={{
+            <NavLink className="nav-item nav-link"
+                     to={{
                         pathname: '/profile',
                         hash: '#francis',
                         search: '?profile=true'}}
                      activeStyle={{color:'red'}}>Profile</NavLink><br/>
+            </nav>
             <hr/>
           </header>
             <Switch>
